@@ -221,9 +221,9 @@ body {
 }
 
 .status-selo.fechado {
-    background: rgba(26, 21, 18, 0.08);
-    color: var(--cor-tinta-suave);
-    border: 1px solid rgba(26, 21, 18, 0.2);
+    background: rgba(185, 28, 28, 0.08);
+    color: #B91C1C;
+    border: 1px solid rgba(185, 28, 28, 0.3);
 }
 
 .status-selo__bolinha {
@@ -1445,16 +1445,14 @@ body {
         <h2 class="secao__titulo-grande reveal">trem di bebê</h2>
     </div>
 
-    <!-- CAFEZIN -->
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">☕ Cafezin</h3>
-        <div class="itens" data-categoria="Cafezin"></div>
+        <h3 class="secao__titulo-categoria reveal">☕ Quentes</h3>
+        <div class="itens" data-categoria="Quentes"></div>
     </div>
 
-    <!-- OUTROS TREM -->
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">🥤 Outros Trem</h3>
-        <div class="itens" data-categoria="Outros Trem Bebê"></div>
+        <h3 class="secao__titulo-categoria reveal">🧊 Geladas</h3>
+        <div class="itens" data-categoria="Geladas"></div>
     </div>
 </section>
 
@@ -1618,34 +1616,34 @@ const CONFIG = {
    ============================================================ */
 const CARDAPIO = [
 
-    // ====================== CAFEZIN ======================
+    // ====================== QUENTES ======================
     {
         id: 'coado',
-        categoria: 'Cafezin',
+        categoria: 'Quentes',
         nome: 'Coado',
         descricao: 'O bom e velho café coado. 180ml.',
         preco: 4.00
     },
     {
         id: 'pingado',
-        categoria: 'Cafezin',
-        nome: 'Pingado',
-        descricao: 'Leite cremoso com café coado.',
+        categoria: 'Quentes',
+        nome: 'Pingado Gourmet',
+        descricao: 'Café coado com leite cremoso.',
         preco: 5.50
     },
     {
         id: 'cafe-com-leite',
-        categoria: 'Cafezin',
+        categoria: 'Quentes',
         nome: 'Café com Leite',
         descricao: 'Café coado com leite e espuminha de leite.',
         preco: 5.50
     },
     {
         id: 'cappuccino-vo',
-        categoria: 'Cafezin',
+        categoria: 'Quentes',
         nome: 'Cappuccino do Vô',
         descricao: 'Cappuccino quentinho e cremosinho, chantilly opcional.',
-        preco: 7.50,
+        preco: 12.00,
         opcoes: [
             {
                 titulo: 'Chantilly',
@@ -1660,17 +1658,19 @@ const CARDAPIO = [
     },
     {
         id: 'cappuccino-dordileite',
-        categoria: 'Cafezin',
+        categoria: 'Quentes',
         nome: 'Cappuccino de Dordilêite',
         descricao: 'Cappuccino do vô com doce de leite.',
-        preco: 10.00
+        preco: 12.00
     },
+
+    // ====================== GELADAS ======================
     {
         id: 'frapuccino-dordileite',
-        categoria: 'Cafezin',
+        categoria: 'Geladas',
         nome: 'Frapuccino Dordilêite',
-        descricao: 'Café, doce de leite, cacau, canela, gelo e chantilly opcional.',
-        preco: 11.50,
+        descricao: 'Café, doce de leite, cacau, canela, gelo e chantilly opcional. 320ml.',
+        preco: 15.00,
         opcoes: [
             {
                 titulo: 'Chantilly',
@@ -1683,11 +1683,9 @@ const CARDAPIO = [
             }
         ]
     },
-
-    // ====================== OUTROS TREM (BEBÊ) ======================
     {
         id: 'guaramao',
-        categoria: 'Outros Trem Bebê',
+        categoria: 'Geladas',
         nome: 'Guaramão',
         descricao: 'Refrigerante de guaraná com limão.',
         preco: 7.10,
@@ -1705,34 +1703,23 @@ const CARDAPIO = [
     },
     {
         id: 'refri-200',
-        categoria: 'Outros Trem Bebê',
+        categoria: 'Geladas',
         nome: 'Refri 200ml',
-        descricao: 'Refrigerante 200ml — guaraná ou pepsi.',
-        preco: 3.00,
-        opcoes: [
-            {
-                titulo: 'Sabor',
-                tipo: 'unica',
-                obrigatoria: true,
-                escolhas: [
-                    { nome: 'Guaraná', precoExtra: 0 },
-                    { nome: 'Pepsi', precoExtra: 0 }
-                ]
-            }
-        ]
+        descricao: 'Refrigerante 200ml — conferir disponibilidade.',
+        preco: 3.00
     },
     {
         id: 'suco-morango',
-        categoria: 'Outros Trem Bebê',
+        categoria: 'Geladas',
         nome: 'Suco de Morango',
-        descricao: 'Suco de morango de 370ml.',
-        preco: 6.00
+        descricao: 'Suco de morango de 350ml.',
+        preco: 9.00
     },
     {
         id: 'pink-lemonade',
-        categoria: 'Outros Trem Bebê',
+        categoria: 'Geladas',
         nome: 'Pink Lemonade',
-        descricao: 'Bebida gaseificada de morango com limão.',
+        descricao: 'Bebida gaseificada de morango com limão. 320ml.',
         preco: 10.00
     },
 
@@ -1745,18 +1732,18 @@ const CARDAPIO = [
         preco: 4.00
     },
     {
-        id: 'dom-pedrao',
-        categoria: 'Pãodiqueijo',
-        nome: 'Dom Pedrão',
-        descricao: 'Pão de queijo prensado recheado com 3 queijos cremosos.',
-        preco: 6.50
-    },
-    {
         id: 'sobradeiro',
         categoria: 'Pãodiqueijo',
         nome: 'Sobradeiro',
         descricao: 'Pão de queijo recheado com Minas ou Requeijão.',
         preco: 6.50
+    },
+    {
+        id: 'dom-pedrao',
+        categoria: 'Pãodiqueijo',
+        nome: 'Dom Pedrão',
+        descricao: 'Pão de queijo prensado recheado com 3 queijos cremosos.',
+        preco: 7.50
     },
     {
         id: 'lapense-doce',
@@ -1784,14 +1771,14 @@ const CARDAPIO = [
         categoria: 'Pãodiqueijo',
         nome: 'Carrancas',
         descricao: 'Pernil desfiado especial do vô e requeijão.',
-        preco: 11.50
+        preco: 12.00
     },
     {
         id: 'grota-do-andu',
         categoria: 'Pãodiqueijo',
         nome: 'Grota do Andu',
         descricao: 'Pernil desfiado, queijo Minas e geleia de abacaxi com pimenta defumada.',
-        preco: 11.50
+        preco: 12.00
     },
 
     // ====================== SALGADOS ======================
@@ -2581,7 +2568,7 @@ function getSecaoDoItem(itemId) {
     const item = CARDAPIO.find(i => i.id === itemId);
     if (!item) return null;
     
-    const categoriasBebe = ['Cafezin', 'Outros Trem Bebê'];
+    const categoriasBebe = ['Quentes', 'Geladas'];
     const categoriasCume = ['Pãodiqueijo', 'Salgados', 'Bolos', 'Pedádiqueijo'];
     
     if (categoriasBebe.includes(item.categoria)) return 'trem-di-bebe';
