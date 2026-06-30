@@ -9,21 +9,23 @@
 <!-- Fontes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@300;400;500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================
    CONFIGURAÇÃO — edite aqui o que for preciso
    ============================================ */
 :root {
-    --cor-papel: #ede4d0;
-    --cor-papel-escuro: #d9cdb2;
-    --cor-tinta: #1a1512;
-    --cor-tinta-suave: #3d342a;
-    --cor-destaque: #8b3a1e;
-    --cor-verde: #4a5d3a;
-    --sombra-sutil: 0 2px 12px rgba(26, 21, 18, 0.08);
-    --sombra-media: 0 8px 32px rgba(26, 21, 18, 0.15);
+    --cor-papel: #EDE4DB;
+    --cor-papel-escuro: #D8DFCF;
+    --cor-tinta: #2A3A27;
+    --cor-tinta-suave: #4D6348;
+    --cor-destaque: #EEDBB1;
+    --cor-laranja: #DC5927;
+    --cor-verde: #465C40;
+    --cor-verde-escuro: #2A3A27;
+    --sombra-sutil: 0 2px 12px rgba(42, 58, 39, 0.08);
+    --sombra-media: 0 8px 32px rgba(42, 58, 39, 0.18);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -96,12 +98,12 @@
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: var(--cor-papel);
     background-image: 
-        radial-gradient(at 20% 30%, rgba(139, 58, 30, 0.04) 0px, transparent 50%),
-        radial-gradient(at 80% 70%, rgba(74, 93, 58, 0.04) 0px, transparent 50%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        radial-gradient(at 20% 30%, rgba(70, 92, 64, 0.05) 0px, transparent 50%),
+        radial-gradient(at 80% 70%, rgba(238, 219, 177, 0.07) 0px, transparent 50%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.07 0 0 0 0 0.1 0 0 0 0 0.07 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     color: var(--cor-tinta);
     line-height: 1.4;
     min-height: 100vh;
@@ -119,7 +121,7 @@ body {
 }
 
 .header__selo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 11px;
     letter-spacing: 3px;
@@ -131,13 +133,13 @@ body {
 }
 
 .header__titulo {
-    font-family: 'Bungee', cursive;
+    font-family: 'Lato', sans-serif;
     font-size: clamp(36px, 10vw, 56px);
-    font-weight: 400;
+    font-weight: 900;
     line-height: 1;
     color: var(--cor-tinta);
     text-transform: lowercase;
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
     margin-bottom: 10px;
     opacity: 0;
     animation: fade-in-up 1s 0.3s ease-out forwards, oscila-titulo 8s 1.5s ease-in-out infinite;
@@ -146,12 +148,12 @@ body {
 }
 
 .header__subtitulo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--cor-destaque);
+    color: var(--cor-verde);
     opacity: 0;
     animation: fade-in-up 0.8s 0.6s ease-out forwards;
 }
@@ -160,7 +162,7 @@ body {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px dotted var(--cor-tinta-suave);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 12px;
@@ -171,8 +173,8 @@ body {
 }
 
 .header__info strong {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-style: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -203,7 +205,7 @@ body {
     margin-top: 14px;
     padding: 6px 14px;
     border-radius: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -251,12 +253,12 @@ body {
 }
 
 .boas-vindas__pergunta {
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(22px, 6vw, 32px);
+    font-style: italic;
     color: var(--cor-tinta);
     text-align: center;
     line-height: 1.15;
-    text-transform: lowercase;
     opacity: 0;
     animation: fade-in-up 0.9s 1s ease-out forwards;
 }
@@ -294,43 +296,52 @@ body {
 
 .escolha-card:hover {
     transform: translateY(-4px) rotate(-0.5deg);
-    box-shadow: 0 12px 32px rgba(26, 21, 18, 0.25);
+    box-shadow: 0 12px 32px rgba(42, 58, 39, 0.25);
 }
 
 .escolha-card:active {
     transform: translateY(1px) scale(0.98);
 }
 
+.escolha-card__icone {
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 4px 0;
+    filter: grayscale(20%);
+}
+
 .escolha-card__etiqueta {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-style: italic;
     font-size: 11px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    opacity: 0.7;
+    opacity: 0.65;
+    color: var(--cor-destaque);
 }
 
 .escolha-card__titulo {
-    font-family: 'Bungee', cursive;
+    font-family: 'Lato', sans-serif;
     font-size: clamp(28px, 8vw, 38px);
+    font-weight: 900;
     text-transform: lowercase;
     line-height: 1;
-    letter-spacing: 0;
+    letter-spacing: -0.02em;
 }
 
 .escolha-card__subtitulo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 11px;
     letter-spacing: 1px;
-    opacity: 0.75;
+    opacity: 0.65;
     margin-top: 4px;
 }
 
 .boas-vindas__rodape {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 11px;
     color: var(--cor-tinta-suave);
@@ -341,8 +352,8 @@ body {
 }
 
 .boas-vindas__rodape strong {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 11px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -373,7 +384,7 @@ body {
     background: transparent;
     border: 1px solid var(--cor-tinta-suave);
     border-radius: 2px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: var(--cor-tinta-suave);
@@ -398,9 +409,9 @@ body {
 }
 
 .nav-topo__opcao {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--cor-tinta-suave);
@@ -414,8 +425,8 @@ body {
 
 .nav-topo__opcao.ativo {
     color: var(--cor-papel);
-    background-color: var(--cor-tinta);
-    border-color: var(--cor-tinta);
+    background-color: var(--cor-verde);
+    border-color: var(--cor-verde);
 }
 
 .nav-topo__opcao:hover:not(.ativo) {
@@ -490,26 +501,29 @@ body {
 .itens.revelado .item:nth-child(8) { transition-delay: 0.4s; }
 
 .secao__titulo-grande {
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 7.5vw, 42px);
-    font-weight: 400;
+    font-weight: 700;
+    font-style: italic;
     text-transform: lowercase;
-    letter-spacing: 0;
+    letter-spacing: -0.01em;
     margin-bottom: 8px;
     line-height: 1;
+    color: var(--cor-tinta);
 }
 
 .secao__titulo-categoria {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--cor-tinta);
+    color: var(--cor-laranja);
     padding-bottom: 12px;
     margin-bottom: 24px;
-    border-bottom: 2px solid var(--cor-tinta);
+    border-bottom: 1.5px solid var(--cor-laranja);
     text-align: center;
+    opacity: 0.9;
 }
 
 .secao__categoria + .secao__categoria {
@@ -537,16 +551,16 @@ body {
 }
 
 .item:hover {
-    background-color: rgba(139, 58, 30, 0.03);
+    background-color: rgba(220, 89, 39, 0.04);
 }
 
 .item:active {
-    background-color: rgba(139, 58, 30, 0.08);
+    background-color: rgba(220, 89, 39, 0.09);
     animation: carimbo 0.3s ease;
 }
 
 .item:hover .item__nome {
-    color: var(--cor-destaque);
+    color: var(--cor-laranja);
     transition: color 0.2s;
 }
 
@@ -559,21 +573,20 @@ body {
 }
 
 .item__nome {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
     font-size: 17px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    letter-spacing: 0;
     color: var(--cor-tinta);
     flex: 1;
 }
 
 .item__preco {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 0.5px;
-    color: var(--cor-tinta);
+    color: var(--cor-laranja);
     white-space: nowrap;
 }
 
@@ -587,7 +600,7 @@ body {
 }
 
 .item__descricao {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 12px;
     color: var(--cor-tinta-suave);
@@ -599,11 +612,11 @@ body {
 .item__tag {
     display: inline-block;
     margin-top: 6px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 10px;
-    color: var(--cor-destaque);
+    color: var(--cor-laranja);
     letter-spacing: 0.3px;
 }
 
@@ -665,18 +678,18 @@ body {
 }
 
 .modal__titulo {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 22px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 0;
     margin-bottom: 6px;
     padding-right: 40px;
 }
 
 .modal__descricao {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
+    font-weight: 300;
     color: var(--cor-tinta-suave);
     margin-bottom: 20px;
     line-height: 1.5;
@@ -689,13 +702,13 @@ body {
 }
 
 .modal__secao-titulo {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 12px;
-    color: var(--cor-tinta);
+    color: var(--cor-verde);
 }
 
 .opcao {
@@ -724,16 +737,15 @@ body {
 }
 
 .opcao__nome {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
 .opcao__preco {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     font-size: 14px;
 }
 
@@ -748,9 +760,9 @@ body {
 }
 
 .modal__quantidade-label {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -763,14 +775,14 @@ body {
 
 .qtd-botao {
     width: 36px; height: 36px;
-    border: 1.5px solid var(--cor-tinta);
+    border: 1.5px solid var(--cor-verde);
     background: transparent;
     border-radius: 50%;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     font-family: inherit;
-    color: var(--cor-tinta);
+    color: var(--cor-verde);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -778,10 +790,10 @@ body {
     line-height: 1;
 }
 
-.qtd-botao:active { background: var(--cor-tinta); color: var(--cor-papel); }
+.qtd-botao:active { background: var(--cor-verde); color: var(--cor-papel); }
 
 .qtd-numero {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
     min-width: 24px;
@@ -803,12 +815,12 @@ body {
 .botao-primario {
     width: 100%;
     padding: 16px;
-    background: var(--cor-tinta);
+    background: var(--cor-verde);
     color: var(--cor-papel);
     border: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
@@ -818,7 +830,7 @@ body {
     gap: 8px;
     transition: background 0.15s;
 }
-.botao-primario:active { background: var(--cor-destaque); }
+.botao-primario:active { background: var(--cor-verde-escuro); }
 .botao-primario:disabled { opacity: 0.4; cursor: not-allowed; }
 
 /* ============================================
@@ -835,7 +847,7 @@ body {
     background: var(--cor-tinta);
     color: var(--cor-papel);
     border: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 2px;
@@ -868,7 +880,7 @@ body {
 }
 
 .carrinho-flutuante__qtd {
-    background: var(--cor-destaque);
+    background: var(--cor-laranja);
     color: var(--cor-papel);
     width: 28px; height: 28px;
     border-radius: 50%;
@@ -909,7 +921,7 @@ body {
 }
 
 .carrinho__header-titulo {
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
     text-transform: lowercase;
     letter-spacing: 0;
@@ -927,7 +939,7 @@ body {
 .carrinho__item-info { flex: 1; }
 
 .carrinho__item-nome {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 1px;
@@ -936,7 +948,7 @@ body {
 }
 
 .carrinho__item-detalhes {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 12px;
     color: var(--cor-tinta-suave);
@@ -950,7 +962,7 @@ body {
 }
 
 .carrinho__item-preco {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 15px;
 }
@@ -958,7 +970,7 @@ body {
 .carrinho__remover {
     background: none;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 12px;
     color: var(--cor-destaque);
@@ -970,7 +982,7 @@ body {
 .carrinho__vazio {
     text-align: center;
     padding: 60px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     color: var(--cor-tinta-suave);
 }
@@ -979,7 +991,7 @@ body {
 .form-secao { margin-top: 24px; padding-top: 20px; border-top: 2px dashed var(--cor-tinta); }
 
 .form-secao__titulo {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 3px;
@@ -991,7 +1003,7 @@ body {
 
 .campo__label {
     display: block;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -1007,7 +1019,7 @@ body {
     padding: 12px 14px;
     border: 1px solid var(--cor-tinta);
     background: transparent;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 15px;
     color: var(--cor-tinta);
     border-radius: 2px;
@@ -1022,7 +1034,7 @@ body {
     padding-right: 40px;
 }
 
-.campo__textarea { resize: vertical; min-height: 72px; font-family: 'Montserrat', sans-serif; font-size: 14px; }
+.campo__textarea { resize: vertical; min-height: 72px; font-family: 'Lato', sans-serif; font-size: 14px; }
 
 .campo__input:focus,
 .campo__select:focus,
@@ -1038,7 +1050,7 @@ body {
     border-radius: 2px;
     text-align: center;
     cursor: pointer;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 13px;
     letter-spacing: 1px;
@@ -1059,7 +1071,7 @@ body {
 .resumo__linha {
     display: flex;
     justify-content: space-between;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     margin-bottom: 6px;
     letter-spacing: 1px;
@@ -1068,7 +1080,7 @@ body {
 .resumo__total {
     display: flex;
     justify-content: space-between;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 2px;
@@ -1079,7 +1091,7 @@ body {
 }
 
 .erro-campo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 12px;
     color: var(--cor-destaque);
@@ -1099,7 +1111,7 @@ body {
 }
 
 .rodape__logo {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 4px;
@@ -1109,7 +1121,7 @@ body {
 }
 
 .rodape__selo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 11px;
     letter-spacing: 3px;
@@ -1119,7 +1131,7 @@ body {
 
 .rodape__info {
     margin-top: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 12px;
     color: var(--cor-tinta-suave);
@@ -1167,7 +1179,7 @@ body {
 }
 
 .sugestao__etiqueta {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-style: italic;
     font-size: 11px;
@@ -1178,7 +1190,7 @@ body {
 }
 
 .sugestao__pergunta {
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 24px;
     color: var(--cor-tinta);
     text-transform: lowercase;
@@ -1187,7 +1199,7 @@ body {
 }
 
 .sugestao__complemento {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 13px;
     color: var(--cor-tinta-suave);
@@ -1206,7 +1218,7 @@ body {
     background: var(--cor-tinta);
     color: var(--cor-papel);
     border: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 2px;
@@ -1230,7 +1242,7 @@ body {
     background: transparent;
     color: var(--cor-tinta-suave);
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 13px;
@@ -1290,15 +1302,15 @@ body {
 }
 
 .celebracao__titulo {
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
-    color: var(--cor-destaque);
+    color: var(--cor-laranja);
     margin-bottom: 8px;
     line-height: 1;
 }
 
 .celebracao__texto {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 16px;
     color: var(--cor-tinta-suave);
@@ -1308,7 +1320,7 @@ body {
     margin-top: 18px;
     padding-top: 14px;
     border-top: 1px dotted var(--cor-tinta-suave);
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 2px;
@@ -1319,9 +1331,9 @@ body {
 .celebracao__numero span {
     display: block;
     margin-top: 6px;
-    font-family: 'Bungee', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 22px;
-    color: var(--cor-destaque);
+    color: var(--cor-laranja);
     letter-spacing: 1px;
 }
 
@@ -1360,20 +1372,22 @@ body {
         <div class="escolha-cards">
             <button class="escolha-card" onclick="escolherSecao('trem-di-cume')">
                 <span class="escolha-card__etiqueta">pra comer</span>
+                <span class="escolha-card__icone">🧀</span>
                 <span class="escolha-card__titulo">trem di cumê</span>
                 <span class="escolha-card__subtitulo">pão de queijo · queijos · quitandas</span>
             </button>
             
             <button class="escolha-card" onclick="escolherSecao('trem-di-bebe')">
                 <span class="escolha-card__etiqueta">pra beber</span>
+                <span class="escolha-card__icone">☕</span>
                 <span class="escolha-card__titulo">trem di bebê</span>
-                <span class="escolha-card__subtitulo">cafezin · chazin · sucos</span>
+                <span class="escolha-card__subtitulo">cafezin · sucos · refri artesanal</span>
             </button>
         </div>
         
         <div class="boas-vindas__rodape">
             <strong>Horário</strong><br>
-            Seg à Sáb · 10h às 18h · Dom · 9h às 13h
+            Seg à Sáb · 10h às 18h
         </div>
     </div>
 </div>
@@ -1403,17 +1417,22 @@ body {
     </div>
 
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Pãodiqueijo</h3>
+        <h3 class="secao__titulo-categoria reveal">🧀 Pãodiqueijo</h3>
         <div class="itens" data-categoria="Pãodiqueijo"></div>
     </div>
 
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Outros Trem</h3>
-        <div class="itens" data-categoria="Outros Trem Cumê"></div>
+        <h3 class="secao__titulo-categoria reveal">🥩 Salgados</h3>
+        <div class="itens" data-categoria="Salgados"></div>
     </div>
 
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Pedádiqueijo</h3>
+        <h3 class="secao__titulo-categoria reveal">🍰 Bolos</h3>
+        <div class="itens" data-categoria="Bolos"></div>
+    </div>
+
+    <div class="secao__categoria">
+        <h3 class="secao__titulo-categoria reveal">🍽️ Pedádiqueijo</h3>
         <div class="itens" data-categoria="Pedádiqueijo"></div>
     </div>
 </section>
@@ -1426,21 +1445,15 @@ body {
         <h2 class="secao__titulo-grande reveal">trem di bebê</h2>
     </div>
 
-    <!-- CHAZIN -->
-    <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Chazin</h3>
-        <div class="itens" data-categoria="Chazin"></div>
-    </div>
-
     <!-- CAFEZIN -->
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Cafezin</h3>
+        <h3 class="secao__titulo-categoria reveal">☕ Cafezin</h3>
         <div class="itens" data-categoria="Cafezin"></div>
     </div>
 
     <!-- OUTROS TREM -->
     <div class="secao__categoria">
-        <h3 class="secao__titulo-categoria reveal">Outros Trem</h3>
+        <h3 class="secao__titulo-categoria reveal">🥤 Outros Trem</h3>
         <div class="itens" data-categoria="Outros Trem Bebê"></div>
     </div>
 </section>
@@ -1590,7 +1603,7 @@ const CONFIG = {
     // Dias: 0=Domingo, 1=Segunda, 2=Terça, 3=Quarta, 4=Quinta, 5=Sexta, 6=Sábado
     // Formato: { inicio: 'HH:MM', fim: 'HH:MM' } ou null se fechado
     horarios: {
-        0: { inicio: '09:00', fim: '13:00' }, // Domingo
+        0: null,                                   // Domingo — fechado
         1: { inicio: '10:00', fim: '18:00' }, // Segunda
         2: { inicio: '10:00', fim: '18:00' }, // Terça
         3: { inicio: '10:00', fim: '18:00' }, // Quarta
@@ -1604,22 +1617,7 @@ const CONFIG = {
    CARDÁPIO — edite itens, preços, descrições e opções aqui
    ============================================================ */
 const CARDAPIO = [
-    // ====================== CHAZIN ======================
-    {
-        id: 'chazin',
-        categoria: 'Chazin',
-        nome: 'Chazin',
-        descricao: 'Chás preparados por infusão.',
-        preco: 5.00
-    },
-    {
-        id: 'chazin-calmante',
-        categoria: 'Chazin',
-        nome: 'Chazin Calmante',
-        descricao: 'Chás de camomila ou erva-cidreira preparados por infusão.',
-        preco: 5.00
-    },
-    
+
     // ====================== CAFEZIN ======================
     {
         id: 'coado',
@@ -1629,16 +1627,16 @@ const CARDAPIO = [
         preco: 4.00
     },
     {
-        id: 'coado-ajeitado',
-        categoria: 'Cafezin',
-        nome: 'Coado Ajeitado',
-        descricao: 'Café especial com grãos selecionados coado na hora sem oxidação. 180ml.',
-        preco: 7.00
-    },
-    {
         id: 'pingado',
         categoria: 'Cafezin',
         nome: 'Pingado',
+        descricao: 'Leite cremoso com café coado.',
+        preco: 5.50
+    },
+    {
+        id: 'cafe-com-leite',
+        categoria: 'Cafezin',
+        nome: 'Café com Leite',
         descricao: 'Café coado com leite e espuminha de leite.',
         preco: 5.50
     },
@@ -1646,22 +1644,8 @@ const CARDAPIO = [
         id: 'cappuccino-vo',
         categoria: 'Cafezin',
         nome: 'Cappuccino do Vô',
-        descricao: 'Café, espuminha de leite, cacau, canela e chantilly.',
-        preco: 8.50
-    },
-    {
-        id: 'cappuccino-dordileite',
-        categoria: 'Cafezin',
-        nome: 'Cappuccino de Dordilêite',
-        descricao: 'Cappuccino do vô com doce de leite.',
-        preco: 10.00
-    },
-    {
-        id: 'frapuccino-dordileite',
-        categoria: 'Cafezin',
-        nome: 'Frapuccino Dordilêite',
-        descricao: 'Café, doce de leite, cacau, canela, gelo e chantilly (opcional).',
-        preco: 10.50,
+        descricao: 'Cappuccino quentinho e cremosinho, chantilly opcional.',
+        preco: 7.50,
         opcoes: [
             {
                 titulo: 'Chantilly',
@@ -1674,7 +1658,32 @@ const CARDAPIO = [
             }
         ]
     },
-    
+    {
+        id: 'cappuccino-dordileite',
+        categoria: 'Cafezin',
+        nome: 'Cappuccino de Dordilêite',
+        descricao: 'Cappuccino do vô com doce de leite.',
+        preco: 10.00
+    },
+    {
+        id: 'frapuccino-dordileite',
+        categoria: 'Cafezin',
+        nome: 'Frapuccino Dordilêite',
+        descricao: 'Café, doce de leite, cacau, canela, gelo e chantilly opcional.',
+        preco: 11.50,
+        opcoes: [
+            {
+                titulo: 'Chantilly',
+                tipo: 'unica',
+                obrigatoria: true,
+                escolhas: [
+                    { nome: 'Com chantilly', precoExtra: 0 },
+                    { nome: 'Sem chantilly', precoExtra: 0 }
+                ]
+            }
+        ]
+    },
+
     // ====================== OUTROS TREM (BEBÊ) ======================
     {
         id: 'guaramao',
@@ -1698,7 +1707,7 @@ const CARDAPIO = [
         id: 'refri-200',
         categoria: 'Outros Trem Bebê',
         nome: 'Refri 200ml',
-        descricao: 'Refrigerante 200ml.',
+        descricao: 'Refrigerante 200ml — guaraná ou pepsi.',
         preco: 3.00,
         opcoes: [
             {
@@ -1716,29 +1725,22 @@ const CARDAPIO = [
         id: 'suco-morango',
         categoria: 'Outros Trem Bebê',
         nome: 'Suco de Morango',
-        descricao: 'Suco de morango de 500ml.',
-        preco: 9.00
+        descricao: 'Suco de morango de 370ml.',
+        preco: 6.00
     },
     {
-        id: 'suco-maracuja',
+        id: 'pink-lemonade',
         categoria: 'Outros Trem Bebê',
-        nome: 'Suco de Maracujá',
-        descricao: 'Suco de maracujá de 500ml.',
-        preco: 9.00
+        nome: 'Pink Lemonade',
+        descricao: 'Bebida gaseificada de morango com limão.',
+        preco: 10.00
     },
-    {
-        id: 'maramora',
-        categoria: 'Outros Trem Bebê',
-        nome: 'Maramora',
-        descricao: 'Suco de morango com maracujá de 500ml (adoçado).',
-        preco: 12.00
-    },
-    
+
     // ====================== PÃODIQUEIJO ======================
     {
         id: 'brasilina',
         categoria: 'Pãodiqueijo',
-        nome: 'Brasilina',
+        nome: 'Brasilina Tradicional',
         descricao: 'Pão de queijo quentin, crocante por fora, macio por dentro.',
         preco: 4.00
     },
@@ -1746,72 +1748,88 @@ const CARDAPIO = [
         id: 'dom-pedrao',
         categoria: 'Pãodiqueijo',
         nome: 'Dom Pedrão',
-        descricao: 'Pão de queijo recheado com Parmesão ou Provolone, Minas Leite Cru e Requeijão de raspas.',
-        preco: 10.00
+        descricao: 'Pão de queijo prensado recheado com 3 queijos cremosos.',
+        preco: 6.50
     },
     {
         id: 'sobradeiro',
         categoria: 'Pãodiqueijo',
         nome: 'Sobradeiro',
-        descricao: 'Pão de queijo recheado com doce de leite e queijo Minas Canastra.',
-        preco: 8.00
+        descricao: 'Pão de queijo recheado com Minas ou Requeijão.',
+        preco: 6.50
     },
     {
-        id: 'goiabal',
+        id: 'lapense-doce',
         categoria: 'Pãodiqueijo',
-        nome: 'Goiabal',
-        descricao: 'Pão de queijo recheado com Goiabada cremosa e requeijão de raspas.',
-        preco: 8.00
+        nome: 'Lapense – Doce',
+        descricao: 'Pão de queijo recheado com doce de leite.',
+        preco: 7.50
+    },
+    {
+        id: 'maravilha-doce',
+        categoria: 'Pãodiqueijo',
+        nome: 'Maravilha – Doce',
+        descricao: 'Pão de queijo recheado com Goiabada cremosa.',
+        preco: 7.50
     },
     {
         id: 'dona-inacia',
         categoria: 'Pãodiqueijo',
         nome: 'Dona Inácia',
-        descricao: 'Pão de queijo recheado com queijo Minas Alba, pernil desfiado e fio de mel.',
-        preco: 17.00
+        descricao: 'Pão de queijo recheado com requeijão, Minas e presunto.',
+        preco: 8.50
     },
     {
         id: 'carrancas',
         categoria: 'Pãodiqueijo',
         nome: 'Carrancas',
-        descricao: 'Pão de queijo com linguiça artesanal, requeijão de barra, geleia de tomate com manjericão e rúcula.',
-        preco: 17.00
+        descricao: 'Pernil desfiado especial do vô e requeijão.',
+        preco: 11.50
     },
-    
-    // ====================== OUTROS TREM (CUMÊ) ======================
+    {
+        id: 'grota-do-andu',
+        categoria: 'Pãodiqueijo',
+        nome: 'Grota do Andu',
+        descricao: 'Pernil desfiado, queijo Minas e geleia de abacaxi com pimenta defumada.',
+        preco: 11.50
+    },
+
+    // ====================== SALGADOS ======================
     {
         id: 'esfirra-costela',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Salgados',
         nome: 'Esfirra de Costela',
-        descricao: '3 Pães de queijo quentin + Cafezin coado.',
+        descricao: 'Artesanal com recheio de costela cremosa e requeijão.',
         preco: 8.80
     },
     {
         id: 'esfirra-frango',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Salgados',
         nome: 'Esfirra de Frango',
-        descricao: 'Dom Pedrão, Carrancas e Sobradeiro.',
+        descricao: 'Artesanal com recheio de frango cremoso, azeitona e requeijão.',
         preco: 8.80
     },
     {
         id: 'coxinha',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Salgados',
         nome: 'Coxinha',
-        descricao: 'Coxinha de frango. Um recheado doce + um recheado salgado + Guaramão ou Coado Arrumado.',
+        descricao: 'Coxinha artesanal com massa de batata e recheio de frango.',
         preco: 7.80
     },
+
+    // ====================== BOLOS ======================
     {
         id: 'broa-queijo',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Bolos',
         nome: 'Broa de Fubá cum Queijo',
         descricao: 'Bolinho de fubá com queijo fresco, quentin.',
         preco: 10.00
     },
     {
         id: 'broa-doce',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Bolos',
         nome: 'Broa de Fubá cum Doce',
-        descricao: 'Bolinho de fubá com queijo fresco, quentin e cobertura de Goiabada ou Dordilête.',
+        descricao: 'Bolinho de fubá com queijo fresco, quentin e cobertura à escolha.',
         preco: 14.00,
         opcoes: [
             {
@@ -1827,46 +1845,39 @@ const CARDAPIO = [
     },
     {
         id: 'bolin-cenoura',
-        categoria: 'Outros Trem Cumê',
+        categoria: 'Bolos',
         nome: 'Bolin de Cenoura cum Chocolate',
         descricao: 'Bolinho de cenoura com fofin, quentin e cobertura de brigadeiro de chocolate 50%.',
         preco: 15.00
     },
-    
+
     // ====================== PEDÁDIQUEIJO ======================
     {
-        id: 'minas-leite-cru',
+        id: 'minas-frescal-tranca',
         categoria: 'Pedádiqueijo',
-        nome: 'Minas Leite Cru',
-        descricao: 'Cunha de 200g de queijo Minas + Cafezin coado.',
-        preco: 42.00
+        nome: 'Minas, Frescal ou Trança',
+        descricao: 'Cunha de 150g de queijo + Cafezin coado.',
+        preco: 12.50
     },
     {
-        id: 'frescal',
+        id: 'queijo-cum-dordileite',
         categoria: 'Pedádiqueijo',
-        nome: 'Frescal',
-        descricao: 'Cunha de 200g de queijo frescal + Cafezin coado.',
-        preco: 42.00
+        nome: 'Queijo cum Dordilêite',
+        descricao: '150g de queijo + cafezin coado + doce de leite.',
+        preco: 10.50
     },
     {
-        id: 'trancinha',
+        id: 'queijo-bem-casado',
         categoria: 'Pedádiqueijo',
-        nome: 'Trancinha',
-        descricao: '200g de queijo frescal + Cafezin coado.',
-        preco: 45.00
-    },
-    {
-        id: 'queijo-cum-doce',
-        categoria: 'Pedádiqueijo',
-        nome: 'Queijo cum Doce',
-        descricao: '200g de queijo + Cafezin coado.',
-        preco: 57.00
+        nome: 'Queijo Bem Casado',
+        descricao: '150g de queijo + cafezin coado + Goiabada.',
+        preco: 10.50
     },
     {
         id: 'queijo-frescal-inteiro',
         categoria: 'Pedádiqueijo',
         nome: 'Queijo Frescal Inteiro',
-        descricao: 'Queijo minas frescal inteiro 450g aproximado.',
+        descricao: 'Queijo minas frescal inteiro, aprox. 450g.',
         preco: 28.80
     }
 ];
@@ -2490,7 +2501,7 @@ adicionarAoCarrinho = function() {
 
 // Gerar confete
 function soltarConfete() {
-    const cores = ['#8b3a1e', '#4a5d3a', '#1a1512', '#d9cdb2', '#c99a5e', '#6b4a2a'];
+    const cores = ['#465C40', '#2A3A27', '#EEDBB1', '#EDE4DB', '#D8DFCF', '#8A9E85'];
     const total = 60;
     
     for (let i = 0; i < total; i++) {
@@ -2570,8 +2581,8 @@ function getSecaoDoItem(itemId) {
     const item = CARDAPIO.find(i => i.id === itemId);
     if (!item) return null;
     
-    const categoriasBebe = ['Chazin', 'Cafezin', 'Outros Trem Bebê'];
-    const categoriasCume = ['Pãodiqueijo', 'Outros Trem Cumê', 'Pedádiqueijo'];
+    const categoriasBebe = ['Cafezin', 'Outros Trem Bebê'];
+    const categoriasCume = ['Pãodiqueijo', 'Salgados', 'Bolos', 'Pedádiqueijo'];
     
     if (categoriasBebe.includes(item.categoria)) return 'trem-di-bebe';
     if (categoriasCume.includes(item.categoria)) return 'trem-di-cume';
@@ -2603,7 +2614,7 @@ function mostrarSugestao() {
     if (secaoAtualCarrinho === 'trem-di-cume') {
         outraSecao = 'trem-di-bebe';
         textoPergunta = 'vai querer um cafezin procê acompanhar?';
-        textoComplemento = 'A gente tem cafezin, chazin, sucos e outros trem pra bebê.';
+        textoComplemento = 'A gente tem cafezin, sucos e outros trem pra bebê.';
     } else {
         outraSecao = 'trem-di-cume';
         textoPergunta = 'e um pãodiqueijo procê acompanhar?';
@@ -2714,7 +2725,7 @@ function mostrarFechado() {
     const complemento = document.getElementById('fechado-complemento');
     
     const horariosTexto = formatarHorariosLista().replace(/\n/g, '<br>');
-    complemento.innerHTML = `Volta pra pedi quando a gente tivé aberto, viu? Nosso horário é:<br><br><strong style="font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:1px; font-size:13px; color:var(--cor-tinta);">${horariosTexto}</strong>`;
+    complemento.innerHTML = `Volta pra pedi quando a gente tivé aberto, viu? Nosso horário é:<br><br><strong style="font-family:'Lato',sans-serif; font-weight:600; letter-spacing:1px; font-size:13px; color:var(--cor-tinta);">${horariosTexto}</strong>`;
     
     document.getElementById('fechado-ok').onclick = () => {
         overlay.classList.remove('aberto');
