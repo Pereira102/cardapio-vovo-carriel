@@ -1101,8 +1101,252 @@ body {
 .erro-campo.visivel { display: block; }
 
 /* ============================================
-   RODAPÉ
+   CUPOM
    ============================================ */
+.cupom-bloco {
+    margin-top: 16px;
+    padding: 14px;
+    border: 1.5px dashed rgba(70,92,64,0.3);
+    border-radius: 3px;
+    background: rgba(70,92,64,0.03);
+}
+
+.cupom-bloco__titulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-tinta-suave);
+    margin-bottom: 10px;
+}
+
+.cupom-bloco__row {
+    display: flex;
+    gap: 8px;
+}
+
+.cupom-bloco__input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-tinta);
+    background: transparent;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-tinta);
+    border-radius: 2px;
+}
+
+.cupom-bloco__input:focus { outline: none; border-color: var(--cor-verde); border-width: 2px; }
+
+.cupom-bloco__btn {
+    padding: 10px 16px;
+    background: var(--cor-verde);
+    color: var(--cor-papel);
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+.cupom-bloco__btn:hover { background: var(--cor-verde-escuro); }
+
+.cupom-bloco__feedback {
+    margin-top: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    display: none;
+}
+.cupom-bloco__feedback.ok { display: block; color: var(--cor-verde); }
+.cupom-bloco__feedback.erro { display: block; color: #B91C1C; }
+
+.cupom-bloco__aplicado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: rgba(70,92,64,0.08);
+    border-radius: 2px;
+    display: none;
+}
+.cupom-bloco__aplicado.visivel { display: flex; }
+.cupom-bloco__aplicado-nome { font-family: 'Lato',sans-serif; font-size:12px; font-weight:700; color:var(--cor-verde); letter-spacing:1px; }
+.cupom-bloco__remover { font-family:'Lato',sans-serif; font-size:11px; color:#B91C1C; background:none; border:none; cursor:pointer; text-decoration:underline; }
+
+/* ============================================
+   PAINEL ADMIN
+   ============================================ */
+#admin-painel {
+    display: none;
+    min-height: 100vh;
+    background: var(--cor-papel);
+    padding: 32px 20px 60px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.admin__titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: var(--cor-tinta);
+    margin-bottom: 4px;
+}
+
+.admin__sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: var(--cor-tinta-suave);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.admin__secao {
+    padding-top: 20px;
+    border-top: 2px dashed var(--cor-tinta);
+    margin-top: 24px;
+}
+
+.admin__secao-titulo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--cor-verde);
+}
+
+.admin__campo { margin-bottom: 12px; }
+
+.admin__label {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cor-tinta-suave);
+    margin-bottom: 5px;
+}
+
+.admin__input, .admin__select {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid var(--cor-tinta);
+    background: transparent;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: var(--cor-tinta);
+    border-radius: 2px;
+}
+.admin__input:focus, .admin__select:focus { outline: none; border-color: var(--cor-verde); }
+
+.admin__row { display: flex; gap: 10px; }
+.admin__row .admin__campo { flex: 1; }
+
+.admin__btn-criar {
+    width: 100%;
+    padding: 14px;
+    background: var(--cor-verde);
+    color: var(--cor-papel);
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+.admin__btn-criar:hover { background: var(--cor-verde-escuro); }
+
+.admin__lista { margin-top: 8px; }
+
+.admin__cupom-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(70,92,64,0.2);
+    gap: 10px;
+}
+
+.admin__cupom-info { flex: 1; }
+
+.admin__cupom-codigo {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cor-tinta);
+}
+
+.admin__cupom-detalhe {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: var(--cor-tinta-suave);
+    margin-top: 2px;
+}
+
+.admin__cupom-acoes { display: flex; gap: 8px; align-items: center; }
+
+.admin__toggle {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1.5px solid;
+    cursor: pointer;
+    background: none;
+}
+.admin__toggle.ativo { color: var(--cor-verde); border-color: var(--cor-verde); }
+.admin__toggle.inativo { color: #B91C1C; border-color: #B91C1C; }
+
+.admin__excluir {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    color: #B91C1C;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.admin__msg {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cor-verde);
+    margin-top: 10px;
+    min-height: 20px;
+}
+
+.admin__vazio {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--cor-tinta-suave);
+    padding: 12px 0;
+}
+
+.resumo__linha.desconto { color: var(--cor-verde); font-weight: 600; }
 .rodape {
     text-align: center;
     padding: 48px 24px 32px;
@@ -1387,7 +1631,8 @@ body {
         
         <div class="boas-vindas__rodape">
             <strong>Horário</strong><br>
-            Seg à Sáb · 10h às 18h
+            Empório: Seg–Sex 10h às 18h · Sáb 9h30 às 18h<br>
+            Café: Seg–Sex 14h às 18h · Sáb 9h30 às 18h
         </div>
     </div>
 </div>
@@ -1601,13 +1846,24 @@ const CONFIG = {
     // Dias: 0=Domingo, 1=Segunda, 2=Terça, 3=Quarta, 4=Quinta, 5=Sexta, 6=Sábado
     // Formato: { inicio: 'HH:MM', fim: 'HH:MM' } ou null se fechado
     horarios: {
-        0: null,                                   // Domingo — fechado
-        1: { inicio: '10:00', fim: '18:00' }, // Segunda
-        2: { inicio: '10:00', fim: '18:00' }, // Terça
-        3: { inicio: '10:00', fim: '18:00' }, // Quarta
-        4: { inicio: '10:00', fim: '18:00' }, // Quinta
-        5: { inicio: '10:00', fim: '18:00' }, // Sexta
-        6: { inicio: '10:00', fim: '18:00' }  // Sábado
+        0: null,                                    // Domingo — fechado
+        1: { inicio: '10:00', fim: '18:00' },  // Segunda
+        2: { inicio: '10:00', fim: '18:00' },  // Terça
+        3: { inicio: '10:00', fim: '18:00' },  // Quarta
+        4: { inicio: '10:00', fim: '18:00' },  // Quinta
+        5: { inicio: '10:00', fim: '18:00' },  // Sexta
+        6: { inicio: '09:30', fim: '18:00' }   // Sábado
+    },
+
+    // Horários do café (funcionamento diferente)
+    horariosCafe: {
+        0: null,
+        1: { inicio: '14:00', fim: '18:00' },  // Segunda
+        2: { inicio: '14:00', fim: '18:00' },  // Terça
+        3: { inicio: '14:00', fim: '18:00' },  // Quarta
+        4: { inicio: '14:00', fim: '18:00' },  // Quinta
+        5: { inicio: '14:00', fim: '18:00' },  // Sexta
+        6: { inicio: '09:30', fim: '18:00' }   // Sábado
     }
 };
 
@@ -1618,31 +1874,38 @@ const CARDAPIO = [
 
     // ====================== QUENTES ======================
     {
+        id: 'filtrado',
+        categoria: 'Quentes',
+        nome: 'Filtrado',
+        descricao: 'Café 80ml. (sem açúcar)',
+        preco: 3.00
+    },
+    {
         id: 'coado',
         categoria: 'Quentes',
         nome: 'Coado',
-        descricao: 'O bom e velho café coado. 180ml.',
+        descricao: 'O bom e velho café coado. 180ml. (sem açúcar)',
         preco: 4.00
     },
     {
         id: 'pingado',
         categoria: 'Quentes',
         nome: 'Pingado Gourmet',
-        descricao: 'Café coado com leite cremoso.',
+        descricao: 'Café com leite cremoso. (sem açúcar)',
         preco: 5.50
     },
     {
         id: 'cafe-com-leite',
         categoria: 'Quentes',
         nome: 'Café com Leite',
-        descricao: 'Café coado com leite e espuminha de leite.',
+        descricao: 'Café com leite e espuminha de leite. (sem açúcar)',
         preco: 5.50
     },
     {
         id: 'cappuccino-vo',
         categoria: 'Quentes',
         nome: 'Cappuccino do Vô',
-        descricao: 'Cappuccino quentinho e cremosinho, chantilly opcional.',
+        descricao: 'Cappuccino quentinho e cremosinho. (sem açúcar, chantilly opcional)',
         preco: 12.00,
         opcoes: [
             {
@@ -1660,11 +1923,50 @@ const CARDAPIO = [
         id: 'cappuccino-dordileite',
         categoria: 'Quentes',
         nome: 'Cappuccino de Dordilêite',
-        descricao: 'Cappuccino do vô com doce de leite.',
+        descricao: 'Cappuccino do vô com doce de leite. (adoçado pelo doce de leite)',
         preco: 12.00
     },
 
     // ====================== GELADAS ======================
+    {
+        id: 'refri-200',
+        categoria: 'Geladas',
+        nome: 'Refri 200ml',
+        descricao: 'Refrigerante 200ml. (conferir disponibilidade)',
+        preco: 3.50
+    },
+    {
+        id: 'guaramao',
+        categoria: 'Geladas',
+        nome: 'Guaramão',
+        descricao: 'Refrigerante de guaraná com limão. (zero açúcar ou comum)',
+        preco: 7.10,
+        opcoes: [
+            {
+                titulo: 'Versão',
+                tipo: 'unica',
+                obrigatoria: true,
+                escolhas: [
+                    { nome: 'Comum', precoExtra: 0 },
+                    { nome: 'Zero açúcar', precoExtra: 0 }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'suco-morango',
+        categoria: 'Geladas',
+        nome: 'Suco de Morango',
+        descricao: 'Suco de morango de 350ml.',
+        preco: 9.00
+    },
+    {
+        id: 'pink-lemonade',
+        categoria: 'Geladas',
+        nome: 'Pink Lemonade',
+        descricao: 'Bebida gaseificada de morango com limão. 320ml.',
+        preco: 13.80
+    },
     {
         id: 'frapuccino-dordileite',
         categoria: 'Geladas',
@@ -1683,45 +1985,6 @@ const CARDAPIO = [
             }
         ]
     },
-    {
-        id: 'guaramao',
-        categoria: 'Geladas',
-        nome: 'Guaramão',
-        descricao: 'Refrigerante de guaraná com limão.',
-        preco: 7.10,
-        opcoes: [
-            {
-                titulo: 'Versão',
-                tipo: 'unica',
-                obrigatoria: true,
-                escolhas: [
-                    { nome: 'Comum', precoExtra: 0 },
-                    { nome: 'Zero', precoExtra: 0 }
-                ]
-            }
-        ]
-    },
-    {
-        id: 'refri-200',
-        categoria: 'Geladas',
-        nome: 'Refri 200ml',
-        descricao: 'Refrigerante 200ml — conferir disponibilidade.',
-        preco: 3.00
-    },
-    {
-        id: 'suco-morango',
-        categoria: 'Geladas',
-        nome: 'Suco de Morango',
-        descricao: 'Suco de morango de 350ml.',
-        preco: 9.00
-    },
-    {
-        id: 'pink-lemonade',
-        categoria: 'Geladas',
-        nome: 'Pink Lemonade',
-        descricao: 'Bebida gaseificada de morango com limão. 320ml.',
-        preco: 10.00
-    },
 
     // ====================== PÃODIQUEIJO ======================
     {
@@ -1736,13 +1999,6 @@ const CARDAPIO = [
         categoria: 'Pãodiqueijo',
         nome: 'Sobradeiro',
         descricao: 'Pão de queijo recheado com Minas ou Requeijão.',
-        preco: 6.50
-    },
-    {
-        id: 'dom-pedrao',
-        categoria: 'Pãodiqueijo',
-        nome: 'Dom Pedrão',
-        descricao: 'Pão de queijo prensado recheado com 3 queijos cremosos.',
         preco: 7.50
     },
     {
@@ -1764,21 +2020,28 @@ const CARDAPIO = [
         categoria: 'Pãodiqueijo',
         nome: 'Dona Inácia',
         descricao: 'Pão de queijo recheado com requeijão, Minas e presunto.',
-        preco: 8.50
+        preco: 9.50
+    },
+    {
+        id: 'dom-pedrao',
+        categoria: 'Pãodiqueijo',
+        nome: 'Dom Pedrão',
+        descricao: 'Pão de queijo prensado recheado com 3 queijos cremosos.',
+        preco: 9.80
     },
     {
         id: 'carrancas',
         categoria: 'Pãodiqueijo',
         nome: 'Carrancas',
         descricao: 'Pernil desfiado especial do vô e requeijão.',
-        preco: 12.00
+        preco: 12.50
     },
     {
         id: 'grota-do-andu',
         categoria: 'Pãodiqueijo',
         nome: 'Grota do Andu',
         descricao: 'Pernil desfiado, queijo Minas e geleia de abacaxi com pimenta defumada.',
-        preco: 12.00
+        preco: 12.50
     },
 
     // ====================== SALGADOS ======================
@@ -1786,14 +2049,14 @@ const CARDAPIO = [
         id: 'esfirra-costela',
         categoria: 'Salgados',
         nome: 'Esfirra de Costela',
-        descricao: 'Artesanal com recheio de costela cremosa e requeijão.',
+        descricao: 'Artesanal com recheio de costela e requeijão.',
         preco: 8.80
     },
     {
         id: 'esfirra-frango',
         categoria: 'Salgados',
         nome: 'Esfirra de Frango',
-        descricao: 'Artesanal com recheio de frango cremoso, azeitona e requeijão.',
+        descricao: 'Artesanal com recheio de frango, azeitona e requeijão.',
         preco: 8.80
     },
     {
@@ -1847,18 +2110,18 @@ const CARDAPIO = [
         preco: 12.50
     },
     {
-        id: 'queijo-cum-dordileite',
+        id: 'queijo-cum-doce',
         categoria: 'Pedádiqueijo',
-        nome: 'Queijo cum Dordilêite',
-        descricao: '150g de queijo + cafezin coado + doce de leite.',
-        preco: 10.50
+        nome: 'Queijo cum Doce',
+        descricao: '150g de queijo + cafezin coado + doce de leite ou Goiabada.',
+        preco: 13.50
     },
     {
         id: 'queijo-bem-casado',
         categoria: 'Pedádiqueijo',
         nome: 'Queijo Bem Casado',
-        descricao: '150g de queijo + cafezin coado + Goiabada.',
-        preco: 10.50
+        descricao: '150g de queijo + cafezin coado + Pão de queijo Brasilina.',
+        preco: 13.50
     },
     {
         id: 'queijo-frescal-inteiro',
@@ -2159,8 +2422,23 @@ function renderizarCarrinho() {
         
         <div class="resumo" id="resumo">
             <div class="resumo__linha"><span>Subtotal</span><span id="resumo-subtotal">${formatarPreco(calcularSubtotal())}</span></div>
+            <div class="resumo__linha desconto" id="resumo-desconto-linha" style="display:none;"><span>🎟️ Desconto</span><span id="resumo-desconto-valor">—</span></div>
             <div class="resumo__linha"><span>Entrega</span><span id="resumo-taxa">—</span></div>
             <div class="resumo__total"><span>Total</span><span id="resumo-total">${formatarPreco(calcularSubtotal())}</span></div>
+        </div>
+
+        <div class="cupom-bloco">
+            <p class="cupom-bloco__titulo">🎟️ Tem cupom?</p>
+            <div class="cupom-bloco__row">
+                <input class="cupom-bloco__input" id="cupom-input" placeholder="CÓDIGO DO CUPOM"
+                    onkeydown="if(event.key==='Enter') aplicarCupom()">
+                <button class="cupom-bloco__btn" onclick="aplicarCupom()">aplicar</button>
+            </div>
+            <div class="cupom-bloco__aplicado" id="cupom-aplicado">
+                <span class="cupom-bloco__aplicado-nome" id="cupom-aplicado-nome"></span>
+                <button class="cupom-bloco__remover" onclick="removerCupom()">remover</button>
+            </div>
+            <p class="cupom-bloco__feedback" id="cupom-feedback"></p>
         </div>
     `;
     
@@ -2190,8 +2468,11 @@ function atualizarTaxa() {
     document.getElementById('resumo-taxa').textContent = tipo === 'retirada' 
         ? 'preocupa não sô, eu vô buscar!' 
         : (taxa > 0 ? formatarPreco(taxa) : 'a gente te fala');
-    document.getElementById('resumo-total').textContent = formatarPreco(subtotal + taxa);
-    document.getElementById('botao-enviar-total').textContent = formatarPreco(subtotal + taxa);
+
+    const desconto = calcularDesconto(cupomAplicado, subtotal);
+    const total = Math.max(0, subtotal - desconto + taxa);
+    document.getElementById('resumo-total').textContent = formatarPreco(total);
+    document.getElementById('botao-enviar-total').textContent = formatarPreco(total);
 }
 
 function verificarTroco() {
@@ -2282,12 +2563,23 @@ function enviarPedido() {
     
     msg += `\n*>> TOTAIS:*\n`;
     msg += `Subtotal: ${formatarPreco(subtotal)}\n`;
+
+    // Cupom
+    const cupomAtivo = window._cupomNoEnvio || cupomAplicado;
+    const desconto = calcularDesconto(cupomAtivo, subtotal);
+    if (cupomAtivo && desconto > 0) {
+        const textoDesc = cupomAtivo.tipo === 'percentual'
+            ? `${cupomAtivo.valor}% off`
+            : `R$ ${cupomAtivo.valor.toFixed(2).replace('.', ',')} off`;
+        msg += `🎟️ Cupom ${cupomAtivo.codigo} (${textoDesc}): – ${formatarPreco(desconto)}\n`;
+    }
+
     if (tipo === 'entrega') {
         msg += `Entrega: ${taxa > 0 ? formatarPreco(taxa) : 'a gente te fala'}\n`;
     } else {
         msg += `Entrega: preocupa não sô, eu vô buscar!\n`;
     }
-    msg += `*Total: ${formatarPreco(subtotal + taxa)}*\n`;
+    msg += `*Total: ${formatarPreco(Math.max(0, subtotal - desconto + taxa))}*\n`;
     
     // Cliente
     msg += `\n*>> CLIENTE:*\n`;
@@ -2652,56 +2944,36 @@ abrirCarrinho = function() {
    HORÁRIO DE FUNCIONAMENTO
    ============================================================ */
 function formatarHorariosLista() {
-    // Retorna um texto humanizado dos horários (agrupando dias iguais)
-    const nomesDias = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-    const h = CONFIG.horarios;
-    
-    // Agrupa sequências com mesmo horário
-    const textos = [];
-    for (let d = 0; d < 7; d++) {
-        const hoje = h[d];
-        if (!hoje) continue;
-        textos.push({ dia: d, hora: `${hoje.inicio} às ${hoje.fim}` });
-    }
-    
-    // Tentativa simples de agrupamento: Seg-Sáb com mesmo horário
-    const semana = [1,2,3,4,5,6].every(d => 
-        h[d] && h[1] && h[d].inicio === h[1].inicio && h[d].fim === h[1].fim
-    );
-    
-    let linhas = [];
-    if (semana && h[1]) {
-        linhas.push(`Seg à Sáb · ${h[1].inicio.replace(':00','h').replace(':','h')} às ${h[1].fim.replace(':00','h').replace(':','h')}`);
-        if (h[0]) linhas.push(`Dom · ${h[0].inicio.replace(':00','h').replace(':','h')} às ${h[0].fim.replace(':00','h').replace(':','h')}`);
-    } else {
-        for (let d = 0; d < 7; d++) {
-            if (h[d]) linhas.push(`${nomesDias[d]} · ${h[d].inicio} às ${h[d].fim}`);
-        }
-    }
-    return linhas.join('\n');
+    return [
+        'Empório: Seg–Sex · 10h às 18h',
+        'Empório: Sáb · 9h30 às 18h',
+        'Café: Seg–Sex · 14h às 18h',
+        'Café: Sáb · 9h30 às 18h',
+        'Dom · fechado'
+    ].join('\n');
 }
 
 function estaAberto() {
     const agora = new Date();
     const diaSemana = agora.getDay();
     const horario = CONFIG.horarios[diaSemana];
-    
+
     if (!horario) return false;
-    
+
     const [hInicio, mInicio] = horario.inicio.split(':').map(Number);
     const [hFim, mFim] = horario.fim.split(':').map(Number);
-    
+
     const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
     const minutosInicio = hInicio * 60 + mInicio;
     const minutosFim = hFim * 60 + mFim;
-    
+
     return minutosAgora >= minutosInicio && minutosAgora < minutosFim;
 }
 
 function atualizarSeloStatus() {
     const selo = document.getElementById('status-selo');
     if (!selo) return;
-    
+
     const aberto = estaAberto();
     selo.className = 'status-selo ' + (aberto ? 'aberto' : 'fechado');
     selo.innerHTML = `<span class="status-selo__bolinha"></span>${aberto ? 'aberto agora' : 'fechado agora'}`;
@@ -2710,15 +2982,19 @@ function atualizarSeloStatus() {
 function mostrarFechado() {
     const overlay = document.getElementById('fechado-overlay');
     const complemento = document.getElementById('fechado-complemento');
-    
-    const horariosTexto = formatarHorariosLista().replace(/\n/g, '<br>');
-    complemento.innerHTML = `Volta pra pedi quando a gente tivé aberto, viu? Nosso horário é:<br><br><strong style="font-family:'Lato',sans-serif; font-weight:600; letter-spacing:1px; font-size:13px; color:var(--cor-tinta);">${horariosTexto}</strong>`;
-    
+
+    complemento.innerHTML = `Volta pra pedi quando a gente tivé aberto, viu?<br><br>
+        <strong style="font-family:'Lato',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--cor-verde);">🏪 Empório</strong><br>
+        <span style="font-family:'Lato',sans-serif;font-size:13px;color:var(--cor-tinta);">Seg–Sex · 10h às 18h<br>Sáb · 9h30 às 18h</span><br><br>
+        <strong style="font-family:'Lato',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--cor-verde);">☕ Café</strong><br>
+        <span style="font-family:'Lato',sans-serif;font-size:13px;color:var(--cor-tinta);">Seg–Sex · 14h às 18h<br>Sáb · 9h30 às 18h</span><br><br>
+        <span style="font-family:'Lato',sans-serif;font-size:12px;color:var(--cor-tinta-suave);">Dom · fechado</span>`;
+
     document.getElementById('fechado-ok').onclick = () => {
         overlay.classList.remove('aberto');
         document.body.style.overflow = '';
     };
-    
+
     overlay.classList.add('aberto');
     document.body.style.overflow = 'hidden';
 }
@@ -2749,5 +3025,249 @@ if (!estaAberto()) {
 }
 </script>
 
+<!-- ============================================
+     PAINEL ADMIN (acessado via ?admin=carriel)
+     ============================================ -->
+<div id="admin-painel">
+    <p class="admin__titulo">painel do vovô</p>
+    <p class="admin__sub">gerenciar cupons de desconto</p>
+
+    <div class="admin__secao">
+        <p class="admin__secao-titulo">🎟️ Criar novo cupom</p>
+
+        <div class="admin__campo">
+            <label class="admin__label">Código do cupom</label>
+            <input class="admin__input" id="admin-codigo" placeholder="Ex: VOVOCARRIEL10" style="text-transform:uppercase;">
+        </div>
+
+        <div class="admin__row">
+            <div class="admin__campo">
+                <label class="admin__label">Tipo</label>
+                <select class="admin__select" id="admin-tipo">
+                    <option value="percentual">Percentual (%)</option>
+                    <option value="fixo">Valor fixo (R$)</option>
+                </select>
+            </div>
+            <div class="admin__campo">
+                <label class="admin__label">Desconto</label>
+                <input class="admin__input" id="admin-valor" type="number" min="1" placeholder="Ex: 10">
+            </div>
+        </div>
+
+        <div class="admin__campo">
+            <label class="admin__label">Descrição (opcional)</label>
+            <input class="admin__input" id="admin-descricao" placeholder="Ex: Cupom de lançamento">
+        </div>
+
+        <button class="admin__btn-criar" onclick="adminCriarCupom()">criar cupom</button>
+        <p class="admin__msg" id="admin-msg"></p>
+    </div>
+
+    <div class="admin__secao">
+        <p class="admin__secao-titulo">📋 Cupons cadastrados</p>
+        <div class="admin__lista" id="admin-lista"></div>
+    </div>
+</div>
+
+<script>
+/* ============================================================
+   SISTEMA DE CUPONS
+   ============================================================ */
+
+// Estado do cupom aplicado
+let cupomAplicado = null;
+
+function carregarCupons() {
+    try {
+        return JSON.parse(localStorage.getItem('vc_cupons') || '[]');
+    } catch(e) { return []; }
+}
+
+function salvarCupons(cupons) {
+    localStorage.setItem('vc_cupons', JSON.stringify(cupons));
+}
+
+function buscarCupom(codigo) {
+    const cupons = carregarCupons();
+    return cupons.find(c => c.codigo === codigo.toUpperCase().trim() && c.ativo);
+}
+
+function calcularDesconto(cupom, subtotal) {
+    if (!cupom) return 0;
+    if (cupom.tipo === 'percentual') return subtotal * (cupom.valor / 100);
+    if (cupom.tipo === 'fixo') return Math.min(cupom.valor, subtotal);
+    return 0;
+}
+
+function aplicarCupom() {
+    const input = document.getElementById('cupom-input');
+    const feedback = document.getElementById('cupom-feedback');
+    const aplicadoEl = document.getElementById('cupom-aplicado');
+
+    if (!input) return;
+
+    const codigo = input.value.trim().toUpperCase();
+    if (!codigo) return;
+
+    const cupom = buscarCupom(codigo);
+
+    feedback.className = 'cupom-bloco__feedback';
+
+    if (!cupom) {
+        feedback.textContent = 'cupom inválido ou expirado, sô.';
+        feedback.classList.add('erro');
+        cupomAplicado = null;
+        aplicadoEl.classList.remove('visivel');
+    } else {
+        cupomAplicado = cupom;
+        const desconto = calcularDesconto(cupom, calcularSubtotal());
+        const textoDesc = cupom.tipo === 'percentual'
+            ? `${cupom.valor}% de desconto`
+            : `R$ ${cupom.valor.toFixed(2).replace('.', ',')} de desconto`;
+        feedback.textContent = `cupom aplicado! ${textoDesc}`;
+        feedback.classList.add('ok');
+        document.getElementById('cupom-aplicado-nome').textContent = `🎟️ ${cupom.codigo} — ${textoDesc}`;
+        aplicadoEl.classList.add('visivel');
+        input.value = '';
+    }
+
+    atualizarResumoCupom();
+}
+
+function removerCupom() {
+    cupomAplicado = null;
+    const feedback = document.getElementById('cupom-feedback');
+    const aplicadoEl = document.getElementById('cupom-aplicado');
+    if (feedback) { feedback.className = 'cupom-bloco__feedback'; feedback.textContent = ''; }
+    if (aplicadoEl) aplicadoEl.classList.remove('visivel');
+    atualizarResumoCupom();
+}
+
+function atualizarResumoCupom() {
+    const subtotal = calcularSubtotal();
+    const desconto = calcularDesconto(cupomAplicado, subtotal);
+
+    // Linha de desconto no resumo
+    const linhaDesc = document.getElementById('resumo-desconto-linha');
+    const valorDesc = document.getElementById('resumo-desconto-valor');
+
+    if (linhaDesc) {
+        linhaDesc.style.display = desconto > 0 ? 'flex' : 'none';
+        if (valorDesc) valorDesc.textContent = `– ${formatarPreco(desconto)}`;
+    }
+
+    // Recalcula total com cupom
+    const tipo = document.querySelector('input[name="tipo"]:checked');
+    let taxa = 0;
+    if (tipo && tipo.value === 'entrega') {
+        const sel = document.getElementById('campo-bairro');
+        if (sel && sel.value !== '') taxa = CONFIG.bairros[parseInt(sel.value)].taxa;
+    }
+
+    const total = Math.max(0, subtotal - desconto + taxa);
+    const elTotal = document.getElementById('resumo-total');
+    const elBotao = document.getElementById('botao-enviar-total');
+    if (elTotal) elTotal.textContent = formatarPreco(total);
+    if (elBotao) elBotao.textContent = formatarPreco(total);
+}
+
+/* ============================================================
+   PAINEL ADMIN
+   ============================================================ */
+
+function adminCriarCupom() {
+    const codigo = document.getElementById('admin-codigo').value.trim().toUpperCase();
+    const tipo   = document.getElementById('admin-tipo').value;
+    const valor  = parseFloat(document.getElementById('admin-valor').value);
+    const desc   = document.getElementById('admin-descricao').value.trim();
+    const msg    = document.getElementById('admin-msg');
+
+    if (!codigo) { msg.textContent = 'coloca um código, sô.'; msg.style.color = '#B91C1C'; return; }
+    if (!valor || valor <= 0) { msg.textContent = 'coloca um valor válido.'; msg.style.color = '#B91C1C'; return; }
+    if (tipo === 'percentual' && valor > 100) { msg.textContent = 'percentual não pode passar de 100%.'; msg.style.color = '#B91C1C'; return; }
+
+    const cupons = carregarCupons();
+    if (cupons.find(c => c.codigo === codigo)) {
+        msg.textContent = 'já existe um cupom com esse código.'; msg.style.color = '#B91C1C'; return;
+    }
+
+    cupons.push({ codigo, tipo, valor, descricao: desc, ativo: true, criadoEm: new Date().toISOString() });
+    salvarCupons(cupons);
+
+    document.getElementById('admin-codigo').value = '';
+    document.getElementById('admin-valor').value = '';
+    document.getElementById('admin-descricao').value = '';
+    msg.textContent = `cupom ${codigo} criado com sucesso!`;
+    msg.style.color = 'var(--cor-verde)';
+
+    setTimeout(() => { msg.textContent = ''; }, 3000);
+    renderAdminLista();
+}
+
+function adminToggleCupom(codigo) {
+    const cupons = carregarCupons();
+    const idx = cupons.findIndex(c => c.codigo === codigo);
+    if (idx > -1) { cupons[idx].ativo = !cupons[idx].ativo; salvarCupons(cupons); }
+    renderAdminLista();
+}
+
+function adminExcluirCupom(codigo) {
+    if (!confirm(`Excluir o cupom ${codigo}? Isso não tem volta.`)) return;
+    const cupons = carregarCupons().filter(c => c.codigo !== codigo);
+    salvarCupons(cupons);
+    renderAdminLista();
+}
+
+function renderAdminLista() {
+    const lista = document.getElementById('admin-lista');
+    if (!lista) return;
+    const cupons = carregarCupons();
+
+    if (!cupons.length) {
+        lista.innerHTML = '<p class="admin__vazio">nenhum cupom cadastrado ainda.</p>';
+        return;
+    }
+
+    lista.innerHTML = cupons.map(c => {
+        const textoDesc = c.tipo === 'percentual' ? `${c.valor}%` : `R$ ${c.valor.toFixed(2).replace('.', ',')}`;
+        return `
+        <div class="admin__cupom-item">
+            <div class="admin__cupom-info">
+                <div class="admin__cupom-codigo">${c.codigo}</div>
+                <div class="admin__cupom-detalhe">${textoDesc} de desconto${c.descricao ? ' · ' + c.descricao : ''}</div>
+            </div>
+            <div class="admin__cupom-acoes">
+                <button class="admin__toggle ${c.ativo ? 'ativo' : 'inativo'}" onclick="adminToggleCupom('${c.codigo}')">
+                    ${c.ativo ? 'ativo' : 'pausado'}
+                </button>
+                <button class="admin__excluir" onclick="adminExcluirCupom('${c.codigo}')">excluir</button>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+/* ============================================================
+   INICIALIZAÇÃO — detecta modo admin na URL
+   ============================================================ */
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('admin') === 'carriel') {
+        document.getElementById('boas-vindas').style.display = 'none';
+        document.getElementById('cardapio-wrap').style.display = 'none';
+        document.getElementById('admin-painel').style.display = 'block';
+        renderAdminLista();
+    }
+})();
+
+/* ============================================================
+   PATCH — incorpora cupom na mensagem WhatsApp
+   ============================================================ */
+const _enviarOriginalComCupom = enviarPedido;
+enviarPedido = function() {
+    // Guarda o cupom pra usar na mensagem
+    window._cupomNoEnvio = cupomAplicado;
+    _enviarOriginalComCupom();
+};
+</script>
 </body>
 </html>
